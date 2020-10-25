@@ -10,6 +10,7 @@ MCAST_PORT = 1900 # 5007
 
 MCAST_GRP_IPV6 = 'FF05::C'
 
+myipaddress = socket.gethostbyname(socket.gethostname())
 
 # regarding socket.IP_MULTICAST_TTL
 # ---------------------------------
@@ -18,7 +19,7 @@ MCAST_GRP_IPV6 = 'FF05::C'
 MULTICAST_TTL = 2
 
 
-mymessage = b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age=60\r\nLOCATION: http://192.168.1.119/description.xml\r\nSERVER: blablaserver SABnzbd\r\nNT: upnp:rootdevice\r\nUSN: uuid:11105501-bf96-4bdf-a60f-382e39a0f84c::upnp:rootdevice\r\nNTS: ssdp:alive\r\nOPT: "http://schemas.upnp.org/upnp/1/0/"; ns=01\r\n01-NLS: 1600778333\r\nBOOTID.UPNP.ORG: 1600778333\r\nCONFIGID.UPNP.ORG: 1337\r\n\r\n'
+mymessage = b'NOTIFY * HTTP/1.1\r\nHOST: 239.255.255.250:1900\r\nCACHE-CONTROL: max-age=60\r\nLOCATION: http://192.168.1.171:8080/description.xml\r\nSERVER: blablaserver 123\r\nNT: upnp:rootdevice\r\nUSN: uuid:11105501-bf96-4bdf-a60f-382e39a0f84c::upnp:rootdevice\r\nNTS: ssdp:alive\r\nOPT: "http://schemas.upnp.org/upnp/1/0/"; ns=01\r\n01-NLS: 1600778333\r\nBOOTID.UPNP.ORG: 1600778333\r\nCONFIGID.UPNP.ORG: 1337\r\n\r\n'
  
 
 while True:
